@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Link, Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Button  from '../core/Button';
 import NavigationLink from '../composite/NavigationLink';
+import logo from '../images/payskul-logo.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleDownload = () => {
-    // Implement download logic or app store redirect
     window.open('https://yourappstore.com/payskul', '_blank');
   };
 
@@ -24,12 +24,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+    <nav className="fixed top-0 left-0 w-full bg-color-primary shadow-sm z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img 
-            src="/assets/images/payskul-logo.png" 
+            src={logo} 
             alt="PaySkul Logo" 
             className="h-8"
           />
@@ -37,7 +37,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6 items-center">
+        <div className="hidden md:flex space-x-6 items-center text-white">
           {navLinks.map((link) => (
             <NavigationLink 
               key={link.path} 

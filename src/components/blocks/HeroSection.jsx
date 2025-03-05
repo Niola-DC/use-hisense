@@ -13,7 +13,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-b from-purple-800 to-purple-600 text-white pt-24 pb-16">
+    <section className="relative bg-primary text-white pt-24 pb-16">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         {/* Text Content */}
         <div className="space-y-6">

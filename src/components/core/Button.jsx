@@ -37,11 +37,11 @@ export default function Button({
     className,
     {
       // Primary variant styles
-      "bg-purple-600 text-white hover:bg-purple-700 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2": 
+      "bg-white text-black hover:bg-grey-4 focus:ring-2 focus:ring-white-500 focus:ring-offset-2": 
         variant === "primary",
       
       // Secondary variant styles
-      "bg-purple-50 text-purple-600 border border-purple-200 hover:bg-purple-100": 
+      "bg-color-primary text-white-600 border border-yellow-200 hover:bg-white-100": 
         variant === "secondary",
       
       // Animation

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '../core/Typography';
 import { Button } from '../core/Button';
-import FeatureIcon from '../composite/FeatureIcon';
+import FeatureIcon from '../composite/FeaturesIcom';
 import { featureData } from '../../data/benefits';
 
 function Card({ feature }) {

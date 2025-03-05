@@ -27,24 +27,8 @@ const EduPlanningSection = () => {
               and ease your financial stress.
             </Typography>
             
-            <div className="flex items-center space-x-4">
-              <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-              <Typography variant="bodySmall" className="text-gray-700">
-                Flexible repayment options
-              </Typography>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-              <Typography variant="bodySmall" className="text-gray-700">
-                Quick and easy application process
-              </Typography>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-              <Typography variant="bodySmall" className="text-gray-700">
-                Personalized loan solutions
-              </Typography>
-            </div>
+             {/* <div className="flex items-center space-x-4"> */}
+              
           </div>
           
           {/* Video Content */}
@@ -72,3 +56,21 @@ const EduPlanningSection = () => {
 };
 
 export default EduPlanningSection;
+
+{/* <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+              <Typography variant="bodySmall" className="text-gray-700">
+                Flexible repayment options
+              </Typography>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+              <Typography variant="bodySmall" className="text-gray-700">
+                Quick and easy application process
+              </Typography>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+              <Typography variant="bodySmall" className="text-gray-700">
+                Personalized loan solutions
+              </Typography>
+            </div> */}
