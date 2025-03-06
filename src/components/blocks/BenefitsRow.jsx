@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography } from '../core/Typography';
-import { Button } from '../core/Button';
+import Button  from '../core/Button';
 import FeatureIcon from '../composite/FeaturesIcom';
 import { featureData } from '../../data/benefits';
 
@@ -13,22 +13,22 @@ function Card({ feature }) {
     // </div>
 
     <div
-      className="bg-purple-700 rounded-xl p-6 text-center hover:bg-purple-600 transition-all"
+      className="rounded-xl p-6 text-center transition-all"
     >
       <FeatureIcon name={feature.icon} />
-      <Typography variant="h5" className="mt-4 mb-2">
+      <Typography variant="h6" className="mt-4 mb-2">
         {feature.title}
       </Typography>
-      <Typography variant="bodySmall" className="text-purple-200">
+      {/* <Typography variant="bodySmall" className="text-purple-200">
         {feature.description}
-      </Typography>
+      </Typography> */}
     </div>
   );
 }
 
 const BenefitsRow = () => {
   return (
-    <section className="bg-purple-800 text-white py-16">
+    <section className="bg-primary text-white py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <Typography variant="h2" className="text-3xl md:text-4xl font-bold mb-4">

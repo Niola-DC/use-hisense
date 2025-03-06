@@ -9,7 +9,7 @@ const PlatformSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Typography variant="h2" className="text-3xl md:text-4xl font-bold text-gray-900">
+            <Typography variant="heading" className="text-3xl md:text-4xl font-bold text-gray-900">
               Finance your future today 
               <br />
               <span className="text-purple-600">with the PaySkul Platform</span>

@@ -4,6 +4,8 @@ import HeroSection from '../components/blocks/HeroSection';
 import Header from '../components/blocks/Header';
 import EduPlanningSection from '../components/blocks/EduPlanningSection';
 import BenefitsRow from '../components/blocks/BenefitsRow';
+import PlatformSection from '../components/blocks/PlatformSection';
+import KnowUs from '../components/blocks/KnowUs';
 // import Footer from '../components/blocks/Footer';
 
 const HomePage = () => {
@@ -13,6 +15,8 @@ const HomePage = () => {
       <HeroSection /> 
       <EduPlanningSection />
       <BenefitsRow />
+      <PlatformSection />
+      <KnowUs />
       {/* <Navbar />
       {/* <Footer /> */}
     </div>
