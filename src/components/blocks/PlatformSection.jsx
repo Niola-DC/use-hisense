@@ -6,13 +6,13 @@ import SocialLinks from '../composite/SocialLinks';
 const PlatformSection = () => {
   return (
     <section className="bg-purple-50 py-16">
-      <div className="container mx-auto px-4">
+      <div className="container max-w-4xl mx-auto px-6 sm:px-8 md:px-12">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <Typography variant="heading" className="text-3xl md:text-4xl font-bold text-gray-900">
               Finance your future today 
               <br />
-              <span className="text-purple-600">with the PaySkul Platform</span>
+              <span className="text-purple-600">with </span> the PaySkul Platform
             </Typography>
             
             <Typography variant="body" className="text-lg text-gray-600">
@@ -20,7 +20,22 @@ const PlatformSection = () => {
               achieve your educational goals with minimal hassle.
             </Typography>
             
-            <div className="flex space-x-4">
+            {/* Buttons */}
+            <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+              <Button 
+                variant="black" 
+                size="large"
+                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.payskul', '_blank')}
+                className="flex items-center space-x-2"
+              >
+                <img 
+                  src="/assets/images/google-play-logo.png" 
+                  alt="Google Play Store"
+                  className="w-5 h-5"
+                />
+                <span>Get on Google Play</span>
+              </Button>
+              
               <Button 
                 variant="primary" 
                 size="large"
@@ -28,12 +43,6 @@ const PlatformSection = () => {
               >
                 Get Started Now
               </Button>
-              
-              <img 
-                src="/assets/images/google-play-badge.png" 
-                alt="Google Play Store" 
-                className="h-12"
-              />
             </div>
 
             <SocialLinks />

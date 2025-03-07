@@ -14,12 +14,16 @@ export default function Header() {
     <React.Fragment>
       <header className="sticky top-0 left-0 z-10 w-full border-b bg-primary px-10 py-8 lg:py-12">
         <Container>
-          <div className="flex items-center justify-end md:gap-16 lg:gap-20">
+          <div className="flex items-center justify-between">
             <Logo />
-            <NavLinksDesktop />
+            {/* Show desktop nav only on large screens */}
+            <div className="hidden lg:flex md:hidden">
+              <NavLinksDesktop />
+            </div>
+            {/* Show hamburger menu on mobile & tablets */}
             <Bars3BottomRightIcon
               onClick={openMenu}
-              className="relative z-20 ml-auto size-8 cursor-pointer text-stone-800 md:hidden"
+              className="relative z-20 ml-auto size-8 cursor-pointer text-stone-800 md:flex lg:hidden"
             />
           </div>
         </Container>

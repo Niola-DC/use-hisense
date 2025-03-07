@@ -43,6 +43,10 @@ export default function Button({
       // Secondary variant styles
       "bg-color-primary text-white-600 border border-yellow-200 hover:bg-white-100": 
         variant === "secondary",
+
+       // Secondary variant styles
+       "bg-black text-white border border-yellow-200 hover:bg-white-100": 
+       variant === "black",
       
       // Animation
       "lg:animate-bounce": animate,

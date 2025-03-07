@@ -11,7 +11,9 @@ const NewsletterSection = () => {
     };
   
     return (
-      <div className="w-full max-w-4xl mx-auto py-12 px-4">
+      <div className="w-full max-w-4xl mx-auto py-12 px-4 md:px-8 lg:px-12">
+
+      {/* <div className="w-full max-w-4xl mx-auto py-12 px-4"> */}
         <div className="text-center">
           <Typography variant="heading">Subscribe to our Newsletter</Typography>
           <Typography>

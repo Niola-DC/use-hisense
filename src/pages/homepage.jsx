@@ -6,6 +6,9 @@ import EduPlanningSection from '../components/blocks/EduPlanningSection';
 import BenefitsRow from '../components/blocks/BenefitsRow';
 import PlatformSection from '../components/blocks/PlatformSection';
 import KnowUs from '../components/blocks/KnowUs';
+import FAQAccordion from '../components/blocks/FAQAccordion';
+import NewsletterSection from '../components/blocks/NewsLetter';
+import Footer from '../components/blocks/Footer';
 // import Footer from '../components/blocks/Footer';
 
 const HomePage = () => {
@@ -16,7 +19,10 @@ const HomePage = () => {
       <EduPlanningSection />
       <BenefitsRow />
       <PlatformSection />
-      <KnowUs />
+      <FAQAccordion />
+      <NewsletterSection />
+      <Footer />
+      {/* <KnowUs /> */}
       {/* <Navbar />
       {/* <Footer /> */}
     </div>

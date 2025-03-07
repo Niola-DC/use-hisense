@@ -3,29 +3,28 @@ import { Typography } from '../core/Typography';
 
 const EduPlanningSection = () => {
   const videoRef = useRef(null);
-  const videoUrl = null; // Set this to null instead of empty string
-  // When video is ready, change to: "/assets/videos/payskul-education-overview.mp4"
+  const videoUrl = null; 
   
-  useEffect(() => {
-    if (videoRef.current && videoUrl) {
-      const playPromise = videoRef.current.play();
+  // useEffect(() => {
+  //   if (videoRef.current && videoUrl) {
+  //     const playPromise = videoRef.current.play();
       
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.error("Video playback error:", error);
-        });
-      }
+  //     if (playPromise !== undefined) {
+  //       playPromise.catch(error => {
+  //         console.error("Video playback error:", error);
+  //       });
+  //     }
       
-      videoRef.current.loop = true;
-    }
-  }, [videoUrl]);
+  //     videoRef.current.loop = true;
+  //   }
+  // }, [videoUrl]);
   
   return (
     <section className="py-16 bg-white flex flex-col items-center text-center">
       <div className="container mx-auto px-4 flex flex-col items-center">
        
         <div className="max-w-2xl space-y-6">
-          <Typography variant="h2" className="text-3xl md:text-4xl font-bold text-gray-900">
+          <Typography variant="heading" className="text-3xl md:text-4xl font-bold text-gray-900">
             Plan your education <span className="text-span">with</span> us
           </Typography>
           <Typography variant="body" className="text-lg text-gray-600">
@@ -33,6 +32,12 @@ const EduPlanningSection = () => {
             We provide affordable education loans to help you focus on your future
             and ease your financial stress.
           </Typography>
+        </div>
+        <div>
+          <img
+          src='#'
+          alt='image'
+          />
         </div>
         
        
