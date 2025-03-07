@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography } from '../core/Typography';
-import { Button } from '../core/Button';
+import Button from '../core/Button';
 import SocialLinks from '../composite/SocialLinks';
 
 const PlatformSection = () => {
