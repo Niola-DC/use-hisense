@@ -45,7 +45,12 @@ const PlatformSection = () => {
               </Button>
             </div>
 
-            <SocialLinks />
+            {/* <SocialLinks /> */}
+            <div className="flex items-center space-x-4">
+              <Typography variant="body">Follow us on social media</Typography>
+              <SocialLinks />
+            </div>
+
           </div>
           
           <div className="flex justify-center">
