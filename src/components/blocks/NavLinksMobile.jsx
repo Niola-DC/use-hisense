@@ -1,17 +1,21 @@
-import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 import { clsx } from "clsx";
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link } from "react-router-dom";
 import { useMenu } from "../../hooks/useMenu";
 import Button from "../core/Button";
-import FlexBox from "../core/FlexBox";
-import DownloadButton from "../core/Button";
+import DownloadButton from "../core/DownloadButton"; // Fixed import name
 
 export default function NavLinksMobile() {
   const { isNavOpen, closeMenu } = useMenu();
-  const NAV_LINKS = ['Home', 'Features', 'Pricing', 'About Us', 'Help'];
-
+  const NAV_LINKS = [
+    { href: 'home', text: 'Home' },
+    { href: 'features', text: 'Features' },
+    { href: 'pricing', text: 'Pricing' },
+    { href: 'about-us', text: 'About Us' },
+    { href: 'help', text: 'Help' }
+  ];
+  
   return (
     <>
       <figure
@@ -23,7 +27,6 @@ export default function NavLinksMobile() {
         )}
         onClick={closeMenu}
       />
-
       <nav
         className={clsx(
           "transition-right fixed top-0 bottom-0 z-20 w-2/3 space-y-8 bg-stone-50 px-3 py-6 duration-500 sm:w-1/2 md:hidden",
@@ -38,7 +41,7 @@ export default function NavLinksMobile() {
             if (link.href === "contact") {
               return (
                 <li key={link.href}>
-                  <Link to={`/${link.href}`}> {link.text}</Link>
+                  <Link to={`/${link.href}`}>{link.text}</Link>
                 </li>
               );
             } else {
@@ -49,7 +52,6 @@ export default function NavLinksMobile() {
                     offset={100}
                     onClick={closeMenu}
                   >
-                    {" "}
                     {link.text}
                   </AnchorLink>
                 </li>

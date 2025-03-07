@@ -24,7 +24,7 @@ const KnowUs = () => {
                       className="h-full object-cover"
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = "https://via.placeholder.com/300x400/indigo/white?text=Student";
+                        e.target.src = "";
                       }}
                     />
                   </div>

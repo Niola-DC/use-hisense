@@ -18,7 +18,7 @@ const PhoneDisplay = ({ images }) => {
       <div 
         className="absolute inset-0 transition-transform duration-500"
         style={{ 
-          transform: 'translateY(-${currentImageIndex * 100}%)',
+          transform: `translateY(-${currentImageIndex * 100}%)`,
         }}
       >
         {images.map((image, index) => (

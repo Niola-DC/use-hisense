@@ -9,11 +9,16 @@ import DownloadButton from "../core/DownloadButton";
 
 export default function NavLinksDesktop() {
   const { currentPage, setCurrentPage } = useMenu();
-  const NAV_LINKS = ['Home', 'Features', 'Pricing', 'About Us', 'Help'];
-
-
+  const NAV_LINKS = [
+    { href: 'home', text: 'Home' },
+    { href: 'features', text: 'Features' },
+    { href: 'pricing', text: 'Pricing' },
+    { href: 'about-us', text: 'About Us' },
+    { href: 'help', text: 'Help' }
+  ];
+  
   return (
-    <nav className="hidden flex-1 justify-end gap-6  capitalize md:flex md:text-sm lg:text-base">
+    <nav className="hidden flex-1 justify-end gap-6 capitalize md:flex md:text-sm lg:text-base">
       {NAV_LINKS.map((link) => {
         if (link.href === "contact") {
           return (

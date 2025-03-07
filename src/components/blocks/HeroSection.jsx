@@ -49,11 +49,7 @@ const HeroSection = () => {
         {/* Phone Display (Images Below) */}
         <div className="mt-12 flex justify-center">
           <PhoneDisplay 
-            images={[
-              '/assets/images/phone-screen-1.png',
-              '/assets/images/phone-screen-2.png',
-              '/assets/images/phone-screen-3.png'
-            ]} 
+            images={[]} 
           />
         </div>
       </div>
