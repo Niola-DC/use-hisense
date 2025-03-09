@@ -33,7 +33,7 @@ export default function Button({
   };
 
   const buttonClasses = clsx(
-    "cursor-pointer text-center rounded transition-all duration-300 ease-in-out",
+    "cursor-pointer text-center rounded-lg transition-all duration-300 ease-in-out",
     className,
     {
       // Primary variant styles
@@ -45,7 +45,7 @@ export default function Button({
         variant === "secondary",
 
        // Secondary variant styles
-       "bg-black text-white border border-yellow-200 hover:bg-white-100": 
+       "bg-black text-white-600 border border-yellow-200 hover:bg-white-100 px-3 py-1": 
        variant === "black",
       
       // Animation
@@ -53,7 +53,7 @@ export default function Button({
       
       // Size variants
       "px-8 py-3 text-lg": size === "large",
-      "px-6 py-2 text-base": size === "medium",
+      "px-6 py-2 text-sm": size === "medium",
       "px-4 py-2 text-sm": size === "small",
       
       // Disabled state

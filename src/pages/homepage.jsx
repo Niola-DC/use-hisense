@@ -9,6 +9,7 @@ import KnowUs from '../components/blocks/KnowUs';
 import FAQAccordion from '../components/blocks/FAQAccordion';
 import NewsletterSection from '../components/blocks/NewsLetter';
 import Footer from '../components/blocks/Footer';
+import Platform from '../components/blocks/Platform';
 // import Footer from '../components/blocks/Footer';
 
 const HomePage = () => {
@@ -19,6 +20,7 @@ const HomePage = () => {
       <EduPlanningSection />
       <BenefitsRow />
       <PlatformSection />
+      {/* <Platform /> */}
       <FAQAccordion />
       <NewsletterSection />
       <Footer />

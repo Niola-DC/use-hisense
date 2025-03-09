@@ -9,6 +9,7 @@ const variantStyles = {
   h4: 'text-xl md:text-2xl font-medium text-gray-800',
   h5: 'text-lg md:text-xl font-medium text-white',
   h6: 'text-base md:text-lg font-medium text-black',
+  priority: 'text-base md:text-lg font-medium text-white',
   body: 'text-base text-gray-600 leading-relaxed',
   bodySmall: 'text-sm text-gray-500 leading-relaxed',
   caption: 'text-xs text-gray-500',

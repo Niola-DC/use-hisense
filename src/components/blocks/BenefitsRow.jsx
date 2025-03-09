@@ -6,23 +6,33 @@ import { featureData } from '../../data/benefits';
 
 function Card({ feature }) {
   return (
-    //   <figure className="to-primary mx-auto w-fit rounded-2xl bg-gradient-to-br from-purple-500 p-3 lg:inline-block">
-    //     <item.icon className="size-10 text-white" />
-    //   </figure>
-    //   <Paragraph>{feature.text}</Paragraph>
-    // </div>
+  
+//     <div className="space-y-3 rounded-2xl border border-stone-100 bg-white px-8 py-10">
+//   <figure className="mx-auto w-fit rounded-2xl bg-gradient-to-br from-purple-500 p-3 lg:inline-block">
+//     <feature.icon className="size-10 text-primary" />
+//   </figure>
+//   <Typography variant="h6">{feature.text}</Typography>
+// </div>
 
-    <div
-      className="rounded-xl p-6 text-center transition-all"
-    >
-      <FeatureIcon name={feature.icon} />
-      <Typography variant="h6" className="mt-4 mb-2">
-        {feature.title}
-      </Typography>
-      {/* <Typography variant="bodySmall" className="text-purple-200">
-        {feature.description}
-      </Typography> */}
+
+    <div className="space-y-3 rounded-2xl px-8 py-10 h-full">
+      <figure className="to-purple-200 mx-auto w-fit rounded-full bg-gradient-to-br from-purple-200 p-3">
+        <feature.icon className="size-10 text-secondary" />
+      </figure>
+      <Typography variant='priority' className='text-center'>{feature.title}</Typography>
     </div>
+
+    // <div
+    //   className="rounded-xl p-6 text-center transition-all"
+    // >
+    //   <FeatureIcon name={feature.icon} />
+    //   <Typography variant="h6" className="mt-4 mb-2">
+    //     {feature.title}
+    //   </Typography>
+    //   {/* <Typography variant="bodySmall" className="text-purple-200">
+    //     {feature.description}
+    //   </Typography> */}
+    // </div>
   );
 }
 
@@ -40,12 +50,18 @@ const BenefitsRow = () => {
           </Typography>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6 mb-16">
+        {/* <div className="grid md:grid-cols-4 gap-6 mb-8">
           {featureData.map((feature, index) => (
             <Card key={index} feature={feature} />
 
           ))}
+        </div> */}
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
+          {featureData.map((feature, index) => (
+            <Card key={index} feature={feature} />
+          ))}
         </div>
+
       </div>
     </section>
   );

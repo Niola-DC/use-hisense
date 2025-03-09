@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { Typography } from '../core/Typography';
+import photo from '../../assets/images/plan.png';
 
 const EduPlanningSection = () => {
   const videoRef = useRef(null);
@@ -20,8 +21,8 @@ const EduPlanningSection = () => {
   // }, [videoUrl]);
   
   return (
-    <section className="py-16 bg-white flex flex-col items-center text-center">
-      <div className="container mx-auto px-4 flex flex-col items-center">
+    <section className="py-6 pb-0 bg-white flex flex-col items-center text-center">
+      <div className="container mx-auto px-2 flex flex-col items-center">
        
         <div className="max-w-2xl space-y-6">
           <Typography variant="heading" className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -35,13 +36,24 @@ const EduPlanningSection = () => {
         </div>
         <div>
           <img
-          src='#'
+          src={photo}
           alt='image'
-          />
+          className='w-full h-auto lg:w-full lg:h-fit object-cover md:w-120 md:h-90 md:items-center z-10 '/>
+
         </div>
-        
-       
-        <div className="mt-12 w-full max-w-4xl aspect-video rounded-xl overflow-hidden shadow-lg">
+      </div>
+    </section>
+  );
+};
+
+export default EduPlanningSection;
+
+
+
+
+ {/* <div className="mt-12 w-full max-w-4xl aspect-video rounded-xl overflow-hidden shadow-lg">
+        //  className='max-w-5xl h-100 md:w-100 md:h-50' />
+
           {videoUrl ? (
             <video
               ref={videoRef}
@@ -80,10 +92,4 @@ const EduPlanningSection = () => {
               </div>
             </div>
           )}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default EduPlanningSection;
+        </div> */}
