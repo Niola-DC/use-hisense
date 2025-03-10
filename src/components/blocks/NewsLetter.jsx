@@ -16,7 +16,7 @@ const NewsletterSection = () => {
       {/* <div className="w-full max-w-4xl mx-auto py-12 px-4"> */}
         <div className="text-center">
           <Typography variant="heading" >Subscribe to our Newsletter</Typography>
-          <Typography className="mt-2">
+          <Typography variant="p" className="mt-2">
             Gorgeous, high-quality design system for mobile, tablet & desktop devices at low resource digital 
             lending platforms with streamline on landing pages
             </Typography>
@@ -44,7 +44,7 @@ const NewsletterSection = () => {
             </button>
           </form>
           
-          <p className="text-sm text-gray-500 mt-4">
+          <p className="text-xs text-gray-500 mt-4">
             We will never spam you. Only useful mails with promo and events
           </p>
         </div>

@@ -30,18 +30,18 @@ const FAQAccordion = () => {
 
         {/* FAQ Section */}
         <div className="lg:order-2">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 mt-6 lg:mt-0 text-center lg:text-left">
+          <h2 className="text-2xl md:text-3xl font-medium mb-6 mt-6 lg:mt-0 text-center lg:text-left">
             Frequently Asked Questions
           </h2>
 
           <div className="space-y-3">
             {faq.map((faq, index) => (
-              <div key={index} className="border rounded-lg bg-pink-50 overflow-hidden text-lg">
+              <div key={index} className="border rounded-lg bg-pink-50 overflow-hidden font-medium text-sm">
                 <button
                   className="w-full px-4 py-3 text-left flex justify-between items-center"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <span className="font-medium">{faq.question}</span>
+                  <span className="font-light">{faq.question}</span>
                   <svg 
                     className={`w-5 h-5 transition-transform ${openIndex === index ? 'rotate-180' : ''}`}
                     fill="none" 
@@ -53,15 +53,15 @@ const FAQAccordion = () => {
                 </button>
                 
                 {openIndex === index && (
-                  <div className="px-4 py-3 bg-white border-t">
-                    <p>{faq.answer}</p>
+                  <div className="px-4 py-3 bg-white border-t text-light">
+                    <p className='text-light'>{faq.answer}</p>
                   </div>
                 )}
               </div>
             ))}
           </div>
           <div className='mt-18'>
-          <p className="text-sm text-gray-500  text-center">
+          <p className="text-xs text-gray-500 text-center">
               Can't find the answer you're looking for? <a href="#" className="text-purple-600 font-medium">Click here</a> to reach out to us.
             </p>
           </div>

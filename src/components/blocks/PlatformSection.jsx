@@ -23,11 +23,11 @@ const PlatformSection = () => {
         </div>
 
         <div className="order-2 lg:order-1">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center lg:text-left">
+          <h2 className="text-3xl md:text-3xl font-medium text-gray-900 text-center lg:text-left">
             Finance your future today<span className="text-purple-600"> with </span> the PaySkul Platform
           </h2>
           <div className="space-y-3">
-            <p className="text-lg text-gray-600 text-center lg:text-left">
+            <p className="text-sm text-gray-600 text-center lg:text-left">
               Seamless, fast, and secure education financing that helps you achieve your educational goals with minimal hassle.
             </p>
 
@@ -52,7 +52,7 @@ const PlatformSection = () => {
             </div>
 
             <div className="mt-16 flex flex-col items-center space-y-2 lg:flex-row lg:space-x-4 lg:space-y-0 justify-center lg:justify-start">
-              <Typography variant="body" className="text-center lg:text-left">
+              <Typography variant="caption" className="text-center lg:text-left">
                 Learn more about our community on socials
               </Typography>
               <SocialLinks />

@@ -51,7 +51,7 @@ const HeroSection = () => {
         {/* Phone Display (Images Below) */}
         <div className="mt-12 flex justify-center">
             <img 
-            className="w-full h-auto lg:w-full lg:h-full object-cover rounded-lg shadow-lg"
+            className="w-full h-auto lg:w-full lg:h-full object-cover"
              src={photo} alt="PaySkul Mockup"  />
         </div>
       </div>
