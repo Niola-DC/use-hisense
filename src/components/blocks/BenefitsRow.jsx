@@ -15,7 +15,7 @@ function Card({ feature }) {
 // </div>
 
 
-    <div className="space-y-3 rounded-2xl px-8 py-10 h-full">
+    <div className="space-y-3 rounded-2xl px-8 py-4 h-full">
       <figure className="to-purple-200 mx-auto w-fit rounded-full bg-gradient-to-br from-purple-200 p-3">
         <feature.icon className="size-10 text-secondary" />
       </figure>
@@ -38,9 +38,9 @@ function Card({ feature }) {
 
 const BenefitsRow = () => {
   return (
-    <section className="bg-primary text-white py-16">
+    <section className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <Typography variant="h2" className="text-3xl md:text-4xl font-bold mb-4">
             Your Education is our Priority
           </Typography>
@@ -58,7 +58,7 @@ const BenefitsRow = () => {
         </div> */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-6 mb-8"> */}
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-2">
           {featureData.map((feature, index) => (
             <Card key={index} feature={feature} />
           ))}

@@ -13,11 +13,11 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative bg-primary text-white pt-24 pb-16 flex flex-col items-center text-center">
+    <section className="relative bg-primary text-white pt-20 flex flex-col items-center text-center">
       <div className="container mx-auto px-4 flex flex-col items-center">
         {/* Text Content */}
-        <div className="max-w-2xl space-y-6">
-          <Typography variant="h1" className="text-4xl md:text-5xl font-bold">
+        <div className="max-w-2xl space-y-2">
+          <Typography variant="h1" className="text-4xl md:text-4xl font-bold">
             School Now Pay Later <span className='text-4xl md:text-4xl text-amber-300'> with </span> PaySkul
           </Typography>
           
@@ -49,9 +49,9 @@ const HeroSection = () => {
         </div>
         
         {/* Phone Display (Images Below) */}
-        <div className="mt-12 flex justify-center">
+        <div className="flex justify-center">
             <img 
-            className="w-full h-auto lg:w-full lg:h-full object-cover"
+            className="w-full h-auto lg:w-full lg:h-5/6 object-cover"
              src={photo} alt="PaySkul Mockup"  />
         </div>
       </div>
