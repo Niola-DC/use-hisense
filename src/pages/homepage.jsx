@@ -14,19 +14,14 @@ import Platform from '../components/blocks/Platform';
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-color-primary">
-      <Header />
+    // <div className="w-full min-h-screen bg-color-primary">
+    <div>
       <HeroSection /> 
       <EduPlanningSection />
       <BenefitsRow />
       <PlatformSection />
-      {/* <Platform /> */}
       <FAQAccordion />
       <NewsletterSection />
-      <Footer />
-      {/* <KnowUs /> */}
-      {/* <Navbar />
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -1,16 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../core/Button';
 import { Typography } from '../core/Typography';
 import photo from '../../assets/images/main.png';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
-  const handleGetStarted = () => {
-    // window.location.href = '/signup';
-  };
+  const navigate = useNavigate();
 
-  const handleBecomePartner = () => {
-    // window.location.href = '/partner-signup';
-  };
+  const [hasDownloaded, setHasDownloaded] = useState(false);
+
+  const handleGetStarted = () => {
+ 
+     const apkUrl = "https://payskul-apk.s3.eu-west-1.amazonaws.com/production/payskul.apk";
+     
+     const link = document.createElement('a');
+     link.href = apkUrl;
+     link.download = 's3://payskul-apk/production/payskul.apk';
+     document.body.appendChild(link);
+     link.click();
+     document.body.removeChild(link);
+ 
+     localStorage.setItem('hasDownloadedApp', 'true');
+     setHasDownloaded(true);
+   };
+
+
+   const handleBecomePartner = () => {
+       navigate('/contact');
+   };
 
   return (
     <section className="relative bg-primary text-white pt-20 flex flex-col items-center text-center">

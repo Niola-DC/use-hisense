@@ -6,10 +6,22 @@ import logo from '../images/payskul-logo.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hasDownloaded, setHasDownloaded] = useState(false);
 
   const handleDownload = () => {
-    window.open('https://yourappstore.com/payskul', '_blank');
+    const apkUrl = "https://payskul-apk.s3.eu-west-1.amazonaws.com/production/payskul.apk";
+    
+    const link = document.createElement('a');
+    link.href = apkUrl;
+    link.download = 's3://payskul-apk/production/payskul.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    localStorage.setItem('hasDownloadedApp', 'true');
+    setHasDownloaded(true);
   };
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

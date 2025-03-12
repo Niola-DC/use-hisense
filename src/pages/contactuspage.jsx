@@ -26,11 +26,11 @@ const ContactUsPage = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16 md:py-20 lg:py-24">
+    <div className="bg-purple-50 w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-16 lg:py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         
         {/* Left Section */}
-        <div className='py-14'>
+        <div className='lg:py-18 text-left'>
           <Typography variant="heading">
             GET IN TOUCH WITH <span className="text-purple-900">US</span>
           </Typography>
@@ -54,7 +54,7 @@ const ContactUsPage = () => {
         </div>
 
         {/* Right Section - Form */}
-        <div className='py-10'>
+        <div className='py-10 lg:py-5'>
           <form onSubmit={handleSubmit} className="space-y-6">
             
             {/* Name Fields */}
@@ -116,7 +116,9 @@ const ContactUsPage = () => {
               required
             ></textarea>
 
-            <Button variant='secondary' className='w-full text-white bg-primary' >Submit</Button>           
+            <SubmitButton />
+            
+            {/* <Button variant='secondary' className='w-full text-white bg-primary' >Submit</Button>            */}
 
           </form>
 
