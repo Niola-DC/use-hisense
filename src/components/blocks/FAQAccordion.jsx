@@ -41,7 +41,7 @@ const FAQAccordion = () => {
                   className="w-full px-4 py-3 text-left flex justify-between items-center"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <span className="font-light">{faq.question}</span>
+                  <span className="text-lg font-semibold ">{faq.question}</span>
                   <svg 
                     className={`w-5 h-5 transition-transform ${openIndex === index ? 'rotate-180' : ''}`}
                     fill="none" 
@@ -54,7 +54,7 @@ const FAQAccordion = () => {
                 
                 {openIndex === index && (
                   <div className="px-4 py-3 bg-white border-t text-light">
-                    <p className='text-light'>{faq.answer}</p>
+                    <p className='text-base font-bold'>{faq.answer}</p>
                   </div>
                 )}
               </div>

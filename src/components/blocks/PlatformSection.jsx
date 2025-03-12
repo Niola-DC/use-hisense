@@ -27,7 +27,7 @@ const PlatformSection = () => {
             Finance your future today<span className="text-purple-600"> with </span> the PaySkul Platform
           </h2>
           <div className="space-y-3">
-            <p className="text-sm text-gray-600 text-center lg:text-left">
+            <p className="text-xs text-gray-600 text-center lg:text-left">
               Seamless, fast, and secure education financing that helps you achieve your educational goals with minimal hassle.
             </p>
 
