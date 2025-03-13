@@ -1,19 +1,21 @@
 import { clsx } from "clsx";
 import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useMenu } from "../../hooks/useMenu";
 import Button from "../core/Button";
 import DownloadButton from "../core/DownloadButton"; // Fixed import name
 
 export default function NavLinksMobile() {
   const { isNavOpen, closeMenu } = useMenu();
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
   const NAV_LINKS = [
-    { href: 'home', text: 'Home' },
-    { href: 'features', text: 'Features' },
-    { href: 'pricing', text: 'Pricing' },
-    { href: 'about-us', text: 'About Us' },
-    { href: 'contact', text: 'Help' }
+    { href: "home", text: "Home" },
+    { href: "features", text: "Features" },
+    { href: "pricing", text: "Pricing" },
+    { href: "about-us", text: "About Us" },
+    { href: "contact", text: "Help" },
   ];
 
   const [hasDownloaded, setHasDownloaded] = useState(false);
@@ -40,7 +42,7 @@ export default function NavLinksMobile() {
           "fixed inset-0 z-10 backdrop-blur-[3px] backdrop-brightness-75 md:hidden",
           {
             hidden: !isNavOpen,
-          },
+          }
         )}
         onClick={closeMenu}
       />
@@ -50,7 +52,7 @@ export default function NavLinksMobile() {
           {
             "-right-[100dvw]": !isNavOpen,
             "right-0": isNavOpen,
-          },
+          }
         )}
       >
         <ul className="py-10 grid gap-3 text-center capitalize *:px-3 *:py-4">
@@ -64,14 +66,17 @@ export default function NavLinksMobile() {
             } else {
               return (
                 <li key={link.href} className="text-white text-left">
-                  <AnchorLink
-                    href={`#${link.href}`}
-                    offset={110}
-                    onClick={closeMenu}
-                  >
-                    {" "}
-                    {link.text}
-                  </AnchorLink>
+                  {isHomePage ? (
+                    <AnchorLink
+                      href={`#${link.href}`}
+                      offset={110}
+                      onClick={closeMenu}
+                    >
+                      {link.text}
+                    </AnchorLink>
+                  ) : (
+                    <Link to={`/#${link.href}`}> {link.text}</Link>
+                  )}
                 </li>
               );
             }
