@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import React from "react";
+import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link } from "react-router-dom";
 import { useMenu } from "../../hooks/useMenu";
@@ -15,6 +15,23 @@ export default function NavLinksMobile() {
     { href: 'about-us', text: 'About Us' },
     { href: 'contact', text: 'Help' }
   ];
+
+  const [hasDownloaded, setHasDownloaded] = useState(false);
+
+  const handleDownload = () => {
+ 
+    const apkUrl = "https://payskul-apk.s3.eu-west-1.amazonaws.com/production/payskul.apk";
+    
+    const link = document.createElement('a');
+    link.href = apkUrl;
+    link.download = 's3://payskul-apk/production/payskul.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    localStorage.setItem('hasDownloadedApp', 'true');
+    setHasDownloaded(true);
+  };
   
   return (
     <>
@@ -64,7 +81,7 @@ export default function NavLinksMobile() {
           <Button href="/contact" variant="secondary" size="medium">
             Become a Partner
           </Button>
-          <DownloadButton size='medium'  />
+          <DownloadButton size='medium' onClick={handleDownload} />
         </div>
       </nav>
     </>
