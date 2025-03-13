@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import SocialLinks from '../components/composite/SocialLinks';
 import { Typography } from '../components/core/Typography';
 import Button from '../components/core/Button';
+import SubmitButton from '../components/core/SubmitButton';
 
 const ContactUsPage = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -20,9 +24,40 @@ const ContactUsPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true); // Set submitting state to true
+
+    // Prepare the form data to be sent to the backend API
+    const requestData = {
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+    const payskul_base_url = 'https://payskul-api.up.railway.app';
+
+    try {
+      const response = await fetch(`${payskul_base_url}/klump/contact_us/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);  
+        setErrorMessage('');    
+      } else {
+        setErrorMessage('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      setErrorMessage('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);  // Set submitting state to false after the request
+    }
   };
 
   return (
@@ -55,6 +90,12 @@ const ContactUsPage = () => {
 
         {/* Right Section - Form */}
         <div className='py-10 lg:py-5'>
+        {isSubmitted ? (
+            <div className="thank-you-message">
+              <h2>Thank you for contacting us!</h2>
+              <p>Our team will get back to you shortly.</p>
+            </div>
+          ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
             
             {/* Name Fields */}
@@ -65,7 +106,7 @@ const ContactUsPage = () => {
                 placeholder="First Name"
                 value={formData.firstName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-4 py-3 rounded-md bg-purple-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 required
               />
               <input
@@ -74,7 +115,7 @@ const ContactUsPage = () => {
                 placeholder="Last Name"
                 value={formData.lastName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-4 py-3 rounded-md bg-purple-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 required
               />
             </div>
@@ -86,7 +127,7 @@ const ContactUsPage = () => {
               placeholder="Email Address"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full px-4 py-3 rounded-md bg-purple-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
               required
             />
 
@@ -95,7 +136,7 @@ const ContactUsPage = () => {
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full px-4 py-3 rounded-md bg-purple-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
               required
             >
               <option value="" disabled>Select Subject</option>
@@ -112,15 +153,17 @@ const ContactUsPage = () => {
               value={formData.message}
               onChange={handleChange}
               rows="6"
-              className="w-full px-4 py-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full px-4 py-3 rounded-md bg-purple-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
               required
             ></textarea>
 
-            <SubmitButton />
+            <div className='justify-center text-center w-full'>
+            <SubmitButton label="Submit" size="custom" className="justify-center" />
+            </div>
             
-            {/* <Button variant='secondary' className='w-full text-white bg-primary' >Submit</Button>            */}
-
-          </form>
+            {errorMessage && <p className="error-message">{errorMessage}</p>}  {/* Show error message if any */}
+            </form>
+          )}
 
           {/* Show this only on mobile */}
           <div className="md:hidden mt-6 justify-center text-center">

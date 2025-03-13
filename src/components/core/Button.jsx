@@ -55,6 +55,7 @@ export default function Button({
       "px-8 py-3 text-lg": size === "large",
       "px-6 py-2 text-sm": size === "medium",
       "px-4 py-2 text-sm": size === "small",
+      "px-20 py-3 text-lg w-full": size === "custom",
       
       // Disabled state
       "opacity-50 cursor-not-allowed": disabled,

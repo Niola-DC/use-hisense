@@ -7,7 +7,7 @@ import photo from '../../assets/images/platform.png';
 
 const PlatformSection = () => {
   return (
-    <div className="bg-purple-200 rounded-lg p-6 w-full max-w-screen mx-auto px-4 md:px-10 lg:px-12 h-full">
+    <div id='pricing' className="bg-purple-200 rounded-lg p-6 w-full max-w-screen mx-auto px-4 md:px-10 lg:px-12 h-full">
       <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-12 items-center">
         
         <div className="order-1 lg:order-2 flex justify-center lg:h-full">

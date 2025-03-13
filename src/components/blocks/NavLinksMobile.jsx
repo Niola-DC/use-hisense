@@ -13,7 +13,7 @@ export default function NavLinksMobile() {
     { href: 'features', text: 'Features' },
     { href: 'pricing', text: 'Pricing' },
     { href: 'about-us', text: 'About Us' },
-    { href: 'help', text: 'Help' }
+    { href: 'contact', text: 'Help' }
   ];
   
   return (
@@ -29,29 +29,30 @@ export default function NavLinksMobile() {
       />
       <nav
         className={clsx(
-          "transition-right fixed top-0 bottom-0 z-20 w-2/3 space-y-8 bg-stone-50 px-3 py-6 duration-500 sm:w-1/2 md:hidden",
+          "transition-right fixed top-0 bottom-0 z-20 w-2/3 space-y-8 bg-primary px-3 py-6 duration-500 sm:w-1/2 md:hidden",
           {
             "-right-[100dvw]": !isNavOpen,
             "right-0": isNavOpen,
           },
         )}
       >
-        <ul className="grid gap-3 text-center capitalize *:px-3 *:py-4">
+        <ul className="py-10 grid gap-3 text-center capitalize *:px-3 *:py-4">
           {NAV_LINKS.map((link) => {
             if (link.href === "contact") {
               return (
-                <li key={link.href}>
-                  <Link to={`/${link.href}`}>{link.text}</Link>
+                <li key={link.href} className="text-white text-left">
+                  <Link to={`/${link.href}`}> {link.text}</Link>
                 </li>
               );
             } else {
               return (
-                <li key={link.href}>
+                <li key={link.href} className="text-white text-left">
                   <AnchorLink
                     href={`#${link.href}`}
-                    offset={100}
+                    offset={110}
                     onClick={closeMenu}
                   >
+                    {" "}
                     {link.text}
                   </AnchorLink>
                 </li>
@@ -59,11 +60,11 @@ export default function NavLinksMobile() {
             }
           })}
         </ul>
-        <div className="grid gap-5">
-          <Button href="/contact" variant="secondary">
+        <div className="grid gap-5 text-white">
+          <Button href="/contact" variant="secondary" size="medium">
             Become a Partner
           </Button>
-          <DownloadButton />
+          <DownloadButton size='medium'  />
         </div>
       </nav>
     </>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Button  from '../core/Button';
 import NavigationLink from '../composite/NavigationLink';
 import logo from '../images/payskul-logo.png'
+import Logo from './Logo';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,26 +33,27 @@ const Navbar = () => {
     { label: 'Features', path: '/features' },
     { label: 'Pricing', path: '/pricing' },
     { label: 'About Us', path: '/about' },
-    { label: 'Help', path: '/help' },
+    { label: 'Help', path: '/contact' },
   ];
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-color-primary shadow-sm z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center">
+        {/* <Link to="/" className="flex items-center">
           <img 
             src={logo} 
             alt="PaySkul Logo" 
             className="h-8"
           />
           
-        </Link>
+        </Link> */}
+        <Logo />
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6 items-center text-white">
           {navLinks.map((link) => (
-            <NavigationLink 
+            <NavigationLink
               key={link.path} 
               label={link.label} 
               path={link.path} 
@@ -67,10 +69,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden">
+        <div className="md:hidden text-white">
           <button 
             onClick={toggleMenu} 
-            className="text-gray-700 focus:outline-none"
+            className="text-white focus:outline-none"
           >
             {isMenuOpen ? '✕' : '☰'}
           </button>
@@ -80,7 +82,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
-          <div className="flex flex-col items-center py-4 space-y-4">
+          <div className="flex flex-col items-center py-4 space-y-4 text-white">
             {navLinks.map((link) => (
               <NavigationLink 
                 key={link.path} 

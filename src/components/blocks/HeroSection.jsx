@@ -30,7 +30,7 @@ const HeroSection = () => {
    };
 
   return (
-    <section className="relative bg-primary text-white pt-20 flex flex-col items-center text-center">
+    <section id='home' className="relative bg-primary text-white pt-20 flex flex-col items-center text-center">
       <div className="container mx-auto px-4 flex flex-col items-center">
         {/* Text Content */}
         <div className="max-w-2xl space-y-2">

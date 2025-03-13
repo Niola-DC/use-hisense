@@ -13,7 +13,7 @@ export default function NavLinksDesktop() {
     { href: "features", text: "Features" },
     { href: "pricing", text: "Pricing" },
     { href: "about-us", text: "About Us" },
-    { href: "help", text: "Help" },
+    { href: "contact", text: "Help" },
   ];
 
   return (
@@ -38,7 +38,14 @@ export default function NavLinksDesktop() {
           </Link>
         ) : (
           <AnchorLink
-            className={linkClass}
+            // className={linkClass}
+            className={clsx(
+              "after:bg-primary after:transition-width relative py-2 after:absolute after:bottom-0 after:left-0 after:hidden after:h-1 after:rounded after:duration-300 hover:after:w-full md:after:inline-block",
+              {
+                "after:w-0": currentPage !== link.href,
+                "after:w-full": currentPage === link.href,
+              },
+            )}
             key={link.href}
             href={`#${link.href}`}
             offset={100}

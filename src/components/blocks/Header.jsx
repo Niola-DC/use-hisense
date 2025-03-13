@@ -23,7 +23,7 @@ export default function Header() {
             {/* Show hamburger menu on mobile & tablets */}
             <Bars3BottomRightIcon
               onClick={openMenu}
-              className="relative z-20 ml-auto size-8 cursor-pointer text-stone-800 md:flex lg:hidden"
+              className="relative z-20 ml-auto size-8 cursor-pointer text-white md:flex lg:hidden"
             />
           </div>
         </Container>
