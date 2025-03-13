@@ -26,7 +26,7 @@ const PlatformSection = () => {
 
         <div className="order-2 lg:order-1">
           <h2 className="text-3xl md:text-3xl font-medium text-gray-900 text-center lg:text-left">
-            Finance your future today<span className="text-purple-600"> with </span> the PaySkul Platform
+            Finance your future today<span className="text-purple-600 font-cafe"> with </span> the PaySkul Platform
           </h2>
           <div className="space-y-3">
             <p className="text-xs text-black font-normal text-center lg:text-left py-4">

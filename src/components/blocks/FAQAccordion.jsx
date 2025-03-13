@@ -10,7 +10,7 @@ const FAQAccordion = () => {
   };
 
   return (
-    <div id='about-us' className="bg-purple-100 rounded-lg w-full max-w-screen mx-auto h-full flex">
+    <div id='about-us' className="bg-purple-100 rounded-lg  mx-auto h-full flex">
       
       {/* FAQ Section */}
       <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center h-full ">
@@ -29,7 +29,7 @@ const FAQAccordion = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="lg:order-2">
+        <div className="lg:order-2 px-8">
           <h2 className="text-2xl md:text-3xl font-medium mb-6 mt-6 lg:mt-0 text-center lg:text-left">
             Frequently Asked Questions
           </h2>
@@ -61,7 +61,7 @@ const FAQAccordion = () => {
             ))}
           </div>
           <div className='mt-18'>
-          <p className="text-xs text-gray-500 text-center">
+          <p className="text-xs text-gray-500 text-center mb-6">
               Can't find the answer you're looking for? <a href="#" className="text-purple-600 font-medium">Click here</a> to reach out to us.
             </p>
           </div>
