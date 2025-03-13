@@ -1,5 +1,6 @@
 import { clsx } from "clsx";
-import React from "react";
+
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useMenu } from "../../hooks/useMenu";
@@ -17,6 +18,22 @@ export default function NavLinksDesktop() {
     { href: "about-us", text: "About Us" },
     { href: "contact", text: "Help" },
   ];
+  const [hasDownloaded, setHasDownloaded] = useState(false);
+
+  const handleDownload = () => {
+    const apkUrl =
+      "https://payskul-apk.s3.eu-west-1.amazonaws.com/production/payskul.apk";
+
+    const link = document.createElement("a");
+    link.href = apkUrl;
+    link.download = "s3://payskul-apk/production/payskul.apk";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    localStorage.setItem("hasDownloadedApp", "true");
+    setHasDownloaded(true);
+  };
 
   return (
     <nav className="hidden flex-1 justify-start gap-10 capitalize text-white md:flex md:text-sm lg:text-base">
@@ -61,7 +78,11 @@ export default function NavLinksDesktop() {
         );
       })}
       <FlexBox className="ml-16">
-        <DownloadButton className="md:hidden lg:block" size="small" />
+        <DownloadButton
+          className="md:hidden lg:block"
+          size="small"
+          onClick={handleDownload}
+        />
       </FlexBox>
     </nav>
   );

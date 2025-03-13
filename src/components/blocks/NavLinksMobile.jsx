@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import React from "react";
+import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link, useLocation } from "react-router-dom";
 import { useMenu } from "../../hooks/useMenu";
@@ -17,7 +17,7 @@ export default function NavLinksMobile() {
     { href: "about-us", text: "About Us" },
     { href: "contact", text: "Help" },
   ];
-
+  
   return (
     <>
       <figure
@@ -69,7 +69,7 @@ export default function NavLinksMobile() {
           <Button href="/contact" variant="secondary" size="medium">
             Become a Partner
           </Button>
-          <DownloadButton size="medium" />
+          <DownloadButton size='medium'  />
         </div>
       </nav>
     </>

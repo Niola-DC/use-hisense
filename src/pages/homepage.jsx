@@ -20,8 +20,8 @@ const HomePage = () => {
           behavior: "smooth",
           block: "start",
         });
-        window.history.replaceState(null, "", window.location.pathname);
       }
+      window.history.replaceState(null, "", window.location.pathname);
     }
   }, [location]);
   return (
