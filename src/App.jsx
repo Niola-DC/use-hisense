@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import PrivacyPolicyPage from './pages/privacypolicy';
 import RootLayout from './pages/layout';
 import TermsPage from './pages/termspage';
+import './index.css';
+
 
 // function App() {
 //   return (

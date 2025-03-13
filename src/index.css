@@ -1,5 +1,6 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 /* Import Tailwind */
 @import "tailwindcss";
@@ -13,17 +14,33 @@
   --color-purple-a: #4B00B7;
 
   /* Define Font Families */
-  --default-font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  --default-font-family: "Urbanist", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   --secondary-font-family: "Ibarra Real Nova", "Josefin Sans", "Raleway", "Urbanist", sans-serif;
 }
 
 /* Apply Fonts */
-body, p, h1, h2, h3, h4, h5, h6 {
+/* body, p, h1, h2, h3, h4, h5, h6 {
   font-family: var(--default-font-family);
+} */
+
+
+@font-face {
+  font-family: 'CafeDeParis';
+  src: url('../assets/fonts/CafeDeParis.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
 }
 
-/* h1, h2, h3 {
-  font-family: var(--secondary-font-family);
-} */
+/* Apply the default font globally */
+body, p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Urbanist', sans-serif;
+}
+
+/* Create a custom class for CafeDeParis */
+.font-cafe {
+  font-family: 'CafeDeParis', cursive;
+}
+
+

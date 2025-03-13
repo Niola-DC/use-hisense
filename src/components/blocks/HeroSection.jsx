@@ -3,6 +3,7 @@ import Button from '../core/Button';
 import { Typography } from '../core/Typography';
 import photo from '../../assets/images/main.png';
 import { useNavigate } from 'react-router-dom';
+import CafeDeParis from '../../assets/fonts/Cafedeparis.ttf';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ const HeroSection = () => {
         {/* Text Content */}
         <div className="max-w-2xl space-y-2">
           <Typography variant="h1" className="text-4xl md:text-4xl font-bold">
-            School Now Pay Later <span className='text-4xl md:text-4xl text-amber-300'> with </span> PaySkul
+            School Now Pay Later <span className='text-5xl md:text-5xl text-amber-300 text font-cafe'> with </span> PaySkul
           </Typography>
           
           <Typography variant="body" className="text-lg text-purple-100 mb-6">
