@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { Typography } from '../core/Typography';
 import photo from '../../assets/images/plan.png';
+import VideoBox from '../composite/VieBox';
+import slider from '../../assets/videos/slider.mp4';
 
 const EduPlanningSection = () => {
   const videoRef = useRef(null);
@@ -41,6 +43,9 @@ const EduPlanningSection = () => {
           className='w-full h-auto lg:w-full lg:h-fit object-cover md:w-120 md:h-90 md:items-center z-10 '/>
 
         </div>
+      </div>
+      <div className='w-full'>
+      <VideoBox src={slider} poster="Motion" />
       </div>
     </section>
   );

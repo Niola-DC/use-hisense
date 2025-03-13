@@ -4,11 +4,13 @@ import Button from '../core/Button';
 import SocialLinks from '../composite/SocialLinks';
 import google from '../../assets/images/Logo.png';
 import photo from '../../assets/images/platform.png';
+import VideoBox from '../composite/VieBox';
+import about from '../../assets/videos/whyPayskul.mp4';
 
 const PlatformSection = () => {
   return (
-    <div id='pricing' className="bg-purple-200 rounded-lg p-6 w-full max-w-screen mx-auto px-4 md:px-10 lg:px-12 h-full">
-      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+    <div id='pricing' className="bg-purple-200 rounded-lg  w-full max-w-screen mx-auto  h-full">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-12 items-center p-6 px-3 md:px-10 lg:px-12">
         
         <div className="order-1 lg:order-2 flex justify-center lg:h-full">
           <img
@@ -27,7 +29,7 @@ const PlatformSection = () => {
             Finance your future today<span className="text-purple-600"> with </span> the PaySkul Platform
           </h2>
           <div className="space-y-3">
-            <p className="text-xs text-gray-600 text-center lg:text-left">
+            <p className="text-xs text-black font-normal text-center lg:text-left py-4">
               Seamless, fast, and secure education financing that helps you achieve your educational goals with minimal hassle.
             </p>
 
@@ -52,7 +54,7 @@ const PlatformSection = () => {
             </div>
 
             <div className="mt-16 flex flex-col items-center space-y-2 lg:flex-row lg:space-x-4 lg:space-y-0 justify-center lg:justify-start">
-              <Typography variant="caption" className="text-center lg:text-left">
+              <Typography variant="caption" className="text-center lg:text-left text-base">
                 Learn more about our community on socials
               </Typography>
               <SocialLinks />
@@ -61,6 +63,7 @@ const PlatformSection = () => {
         </div>
 
       </div>
+      <VideoBox src={about} poster="About Payskul" />
     </div>
   );
 };

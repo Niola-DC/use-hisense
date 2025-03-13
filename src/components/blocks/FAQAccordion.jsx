@@ -10,17 +10,17 @@ const FAQAccordion = () => {
   };
 
   return (
-    <div id='about-us' className="bg-purple-100 rounded-lg p-6 w-full max-w-screen mx-auto px-4 md:px-10 lg:px-12 h-full">
+    <div id='about-us' className="bg-purple-100 rounded-lg w-full max-w-screen mx-auto h-full flex">
       
       {/* FAQ Section */}
-      <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+      <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center h-full ">
         
         {/* Image Section */}
         <div className="lg:order-1 flex justify-center lg:h-full">
           <img 
             src={photo} 
             alt="Student with books and backpack" 
-            className="w-full h-auto lg:w-full lg:h-full object-cover rounded-lg shadow-lg md:w-fit"
+            className="w-full h-full lg:w-full lg:h-full object-cover shadow-lg md:w-fit"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src = "";

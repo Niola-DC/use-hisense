@@ -9,11 +9,11 @@ const variantStyles = {
   h4: 'text-xl md:text-2xl font-medium text-gray-800',
   h5: 'text-lg md:text-xl font-medium text-white',
   h6: 'text-normal md:text-lg font-normal text-black',
-  priority: 'text-base md:text-lg font-normal text-white',
+  priority: "text-base md:text-base font-light text-white",
   body: 'text-gray-600 leading-relaxed text-sm',
   bodySmall: 'text-sm text-gray-500 leading-relaxed',
-  caption: 'text-xs text-gray-500',
-  span: 'text-3xl md:text-4xl text-yellow',
+  caption: 'text- font-normal text-black',
+  span: 'text-3xl md:text-4xl text-yellow text-primary',
   p: 'text-sm mb-8 max-w-2xl mx-auto text-grey-800'
 };
 
