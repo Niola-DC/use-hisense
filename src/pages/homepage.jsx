@@ -1,5 +1,4 @@
-import React from 'react';
-import Navbar from '../components/blocks/Navbar';
+import React, { useEffect } from 'react';
 import HeroSection from '../components/blocks/HeroSection';
 import Header from '../components/blocks/Header';
 import EduPlanningSection from '../components/blocks/EduPlanningSection';
@@ -10,6 +9,7 @@ import FAQAccordion from '../components/blocks/FAQAccordion';
 import NewsletterSection from '../components/blocks/NewsLetter';
 import Footer from '../components/blocks/Footer';
 import Platform from '../components/blocks/Platform';
+import { useLocation } from 'react-router-dom';
 // import Footer from '../components/blocks/Footer';
 
 const HomePage = () => {
