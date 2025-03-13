@@ -32,7 +32,7 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-12">
-          <ul className="space-y-2 lg:space-y-4">
+          <ul className="space-y-2 lg:space-y-6">
             <li className="font-semibold text-white text-left">Explore</li>
             <li className='text-left'>
               <Link to="/communities" className="text-gray-300 hover:text-white transition">
@@ -46,7 +46,7 @@ const Footer = () => {
             </li>
           </ul>
 
-          <ul className="space-y-2 lg:space-y-4">
+          <ul className="space-y-2 lg:space-y-6">
             <li className="font-semibold text-white text-left">Legal</li>
             <li className='text-left'>
               <Link to="/terms" className="text-gray-300 hover:text-white transition">
@@ -60,7 +60,7 @@ const Footer = () => {
             </li>
           </ul>
 
-          <ul className="space-y-2 lg:space-y-4">
+          <ul className="space-y-2 lg:space-y-6">
             <li className="font-semibold text-white text-left">Contact Us</li>
             <li className="text-gray-300">Email: info@payskul.com</li>
           <SocialLinks />
@@ -71,7 +71,7 @@ const Footer = () => {
         {/* Social Links (Now in a row) */}
         <div className="flex space-x-4">
           {/* <SocialLinks /> */}
-          <DownloadButton onClick={handleDownload}/>
+          <DownloadButton size='small' onClick={handleDownload}/>
         </div>
       </div>
     </div>
