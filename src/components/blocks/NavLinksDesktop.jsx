@@ -18,6 +18,7 @@ export default function NavLinksDesktop() {
     { href: "about-us", text: "About Us" },
     { href: "contact", text: "Help" },
   ];
+
   const [hasDownloaded, setHasDownloaded] = useState(false);
 
   const handleDownload = () => {
@@ -34,6 +35,7 @@ export default function NavLinksDesktop() {
     localStorage.setItem("hasDownloadedApp", "true");
     setHasDownloaded(true);
   };
+
 
   return (
     <nav className="hidden flex-1 justify-start gap-10 capitalize text-white md:flex md:text-sm lg:text-base">
