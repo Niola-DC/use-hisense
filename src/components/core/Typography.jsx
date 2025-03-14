@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 const variantStyles = {
   h1: 'text-4xl md:text-5xl font-medium text-white',
-  h2: 'text-3xl md:text-4xl font-medium text-white',
-  heading: 'text-3xl md:text-3xl font-medium text-black',
+  h2: 'text-3xl md:text-4xl font-semibold text-white',
+  heading: 'text-3xl md:text-4xl font-semibold text-black',
   h3: 'text-2xl md:text-3xl font-semibold text-gray-800',
   h4: 'text-xl md:text-2xl font-medium text-gray-800',
   h5: 'text-lg md:text-xl font-medium text-white',
@@ -15,6 +15,7 @@ const variantStyles = {
   caption: 'text- font-normal text-black',
   span: 'text-3xl md:text-4xl text-yellow text-primary',
   p: 'text-sm mb-8 max-w-2xl mx-auto text-grey-800'
+  
 };
 
 const Typography = ({

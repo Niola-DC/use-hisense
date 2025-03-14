@@ -14,8 +14,8 @@ export default function NavLinksDesktop() {
   const NAV_LINKS = [
     { href: "home", text: "Home" },
     { href: "features", text: "Features" },
-    { href: "pricing", text: "Pricing" },
     { href: "about-us", text: "About Us" },
+    { href: "subscribe", text: "Subscribe" },
     { href: "contact", text: "Help" },
   ];
 
@@ -50,10 +50,14 @@ export default function NavLinksDesktop() {
 
         return link.href === "contact" ? (
           <Link
-            onClick={setCurrentPage.bind(null, link.href)}
+            // onClick={setCurrentPage.bind(null, link.href)}
             className={linkClass}
             key={link.href}
             to={`/${link.href}`}
+            onClick={() => {
+              setCurrentPage.bind(null, link.href);
+              window.scrollTo(0, 0);
+            }}
           >
             {link.text}
           </Link>
@@ -70,8 +74,12 @@ export default function NavLinksDesktop() {
           </AnchorLink>
         ) : (
           <Link
-            onClick={setCurrentPage.bind(null, link.href)}
+            // onClick={setCurrentPage.bind(null, link.href)}
             className={linkClass}
+            onClick={() => {
+              setCurrentPage.bind(null, link.href);
+              window.scrollTo(0, 0);
+            }}
             key={link.href}
             to={`/#${link.href}`}
           >

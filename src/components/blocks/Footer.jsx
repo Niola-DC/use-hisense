@@ -8,19 +8,25 @@ const Footer = () => {
 
   const [hasDownloaded, setHasDownloaded] = useState(false);
   
-    const handleDownload = () => {
-      const apkUrl = "https://payskul-apk.s3.eu-west-1.amazonaws.com/production/payskul.apk";
-      
-      const link = document.createElement('a');
-      link.href = apkUrl;
-      link.download = 's3://payskul-apk/production/payskul.apk';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-  
-      localStorage.setItem('hasDownloadedApp', 'true');
-      setHasDownloaded(true);
-    };
+  const handleDownload = () => {
+    const apkUrl = "https://payskul-apk.s3.eu-west-1.amazonaws.com/production/payskul.apk";
+    
+    const link = document.createElement('a');
+    link.href = apkUrl;
+    link.download = 's3://payskul-apk/production/payskul.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    localStorage.setItem('hasDownloadedApp', 'true');
+    setHasDownloaded(true);
+  };
+
+  const handleEmailClick = () => {
+    const email = 'info@payskul.com';
+    const mailtoLink = `mailto:${email}`;
+    window.location.href = mailtoLink;  // This will open the default email client
+  };
   
   return (
     <div className="bg-primary px-6 py-16 mt-2 lg:py-12 md:px-10">
@@ -70,7 +76,7 @@ const Footer = () => {
 
           <ul className="space-y-2 lg:space-y-6">
             <li className="font-semibold text-white text-left">Contact Us</li>
-            <li className="text-gray-300">Email: info@payskul.com</li>
+            <li className="text-gray-300 cursor-pointer"><a onClick={handleEmailClick}>Email: info@payskul.com</a></li>
           <SocialLinks />
 
           </ul>

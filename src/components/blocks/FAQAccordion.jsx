@@ -10,7 +10,7 @@ const FAQAccordion = () => {
   };
 
   return (
-    <div id='about-us' className="bg-purple-100 rounded-lg  mx-auto h-full flex">
+    <div className="bg-purple-100 rounded-lg  mx-auto h-full flex">
       
       {/* FAQ Section */}
       <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center h-full ">
@@ -29,14 +29,14 @@ const FAQAccordion = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="lg:order-2 px-8">
-          <h2 className="text-2xl md:text-3xl font-medium mb-6 mt-6 lg:mt-0 text-center lg:text-left">
+        <div className="lg:order-2">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-6 mt-6 lg:mt-0 text-center lg:text-left">
             Frequently Asked Questions
           </h2>
 
           <div className="space-y-3">
             {faq.map((faq, index) => (
-              <div key={index} className="border rounded-lg bg-pink-50 overflow-hidden font-medium text-sm">
+              <div key={index} className="border rounded-lg bg-pink-50 overflow-hidden font-medium text-sm lg:w-lg">
                 <button
                   className="w-full px-4 py-3 text-left flex justify-between items-center"
                   onClick={() => toggleFAQ(index)}
@@ -61,7 +61,7 @@ const FAQAccordion = () => {
             ))}
           </div>
           <div className='mt-18'>
-          <p className="text-xs text-gray-500 text-center mb-6">
+          <p className="text-xs text-gray-500 text-center mb-6 lg:text-center lg:w-lg">
               Can't find the answer you're looking for? <a href="#" className="text-purple-600 font-medium">Click here</a> to reach out to us.
             </p>
           </div>

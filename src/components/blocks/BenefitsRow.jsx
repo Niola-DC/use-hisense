@@ -15,9 +15,9 @@ function Card({ feature }) {
 // </div>
 
 
-    <div className="space-y-3 rounded-2xl px-8 py-4 h-full">
+    <div className="space-y-3 rounded-2xl px-6 py-3 h-full">
       <figure className="to-purple-200 mx-auto w-fit rounded-full bg-gradient-to-br from-purple-200 p-3">
-        <feature.icon className="size-10 text-secondary" />
+        <feature.icon className="size-8 text-secondary" />
       </figure>
       <Typography variant='priority' className='text-center'>{feature.title}</Typography>
     </div>

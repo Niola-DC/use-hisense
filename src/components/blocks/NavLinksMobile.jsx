@@ -13,8 +13,8 @@ export default function NavLinksMobile() {
   const NAV_LINKS = [
     { href: "home", text: "Home" },
     { href: "features", text: "Features" },
-    { href: "pricing", text: "Pricing" },
     { href: "about-us", text: "About Us" },
+    { href: "subscribe", text: "Subscribe" },
     { href: "contact", text: "Help" },
   ];
 

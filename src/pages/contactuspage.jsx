@@ -59,6 +59,28 @@ const ContactUsPage = () => {
       setIsSubmitting(false);  // Set submitting state to false after the request
     }
   };
+  // const handlePhoneClick = (phoneNumber) => {
+  //   if (navigator.clipboard) {
+  //     navigator.clipboard.writeText(phoneNumber).then(() => {
+  //       alert(`Phone number ${phoneNumber} copied to clipboard!`);
+  //     }).catch((err) => {
+  //       console.error("Failed to copy phone number:", err);
+  //     });
+  //   } else {
+  //     // For mobile, use tel: to trigger the dialer
+  //     const telLink = `tel:${phoneNumber}`;
+  //     window.location.href = telLink;
+  //   }
+  // };
+
+  const handlePhoneClick = (phoneNumber) => {
+    if (!phoneNumber) return;
+  
+    // Create a tel: link to open the dialer
+    const telLink = `tel:${phoneNumber}`;
+    window.location.href = telLink;
+  };
+  
 
   return (
     <div className="bg-purple-50 w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-16 lg:py-20">
@@ -168,9 +190,15 @@ const ContactUsPage = () => {
           {/* Show this only on mobile */}
           <div className="md:hidden mt-6 justify-center text-center">
             <Typography variant="h6">Or call our customer support lines</Typography>
-            <Typography variant="p" className="mt-1">
-              +234 916 070 8325, +234 706 751 4560
-            </Typography>
+            {/* <Typography variant="p" className="mt-1 cursor-pointer"> */}
+            <ul>
+              <li className='cursor-pointer' onClick={handlePhoneClick}>
+              +234 916 070 8325, 
+              </li>
+              <li className='cursor-pointer' onClick={handlePhoneClick}>
+              +234 706 751 4560</li>
+            </ul>
+            {/* </Typography> */}
             <div className="mt-6 flex justify-center">
             <SocialLinks />
             </div>

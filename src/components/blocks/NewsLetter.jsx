@@ -43,14 +43,16 @@ const NewsletterSection = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto py-18 px-4 md:px-8 lg:px-12">
+    <div id="subscribe" className="w-full max-w-4xl mx-auto py-18 px-4 md:px-8 lg:px-12">
 
       {/* <div className="w-full max-w-4xl mx-auto py-12 px-4"> */}
       <div className="text-center">
         <Typography variant="heading" >Subscribe to our Newsletter</Typography>
-        <Typography variant="p" className="mt-2">
-          Gorgeous, high-quality design system for mobile, tablet & desktop devices at low resource digital
-          lending platforms with streamline on landing pages
+        {/* <Typography variant="p" className="mt-2">
+        Don't miss out! Stay ahead with exclusive updates, insider news, and special offers—delivered straight to you.
+        </Typography> */}
+        <Typography variant="p">
+        Don't miss out! Stay ahead with exclusive updates, insider news, and special offers from <span className="text-purple-800">Payskul</span>—your go-to platform for seamless school management.
         </Typography>
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto mt-10">
           <div className="relative flex-grow">

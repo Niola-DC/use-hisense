@@ -40,8 +40,8 @@ const HeroSection = () => {
           </Typography>
           
           <Typography variant="body" className="text-lg text-purple-100 mb-6">
-            We provide affordable education loans with flexible repayment options. 
-            Plan your education without financial stress and focus on your future.
+            We provide affordable education loans with flexible repayment options. Tailored to empower students achieve their dreams without financial stress.
+            Plan your your future today with PaySkul.
           </Typography>
           
           {/* Buttons Always Side by Side */}
