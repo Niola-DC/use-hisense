@@ -60,7 +60,11 @@ export default function NavLinksMobile() {
             if (link.href === "contact") {
               return (
                 <li key={link.href} className="text-white text-left">
-                  <Link to={`/${link.href}`}> {link.text}</Link>
+                  <Link to={`/${link.href}`}  
+                  onClick={() => {
+                    closeMenu(); 
+                    window.scrollTo(0, 0);
+                  }}> {link.text}</Link>
                 </li>
               );
             } else {
@@ -75,7 +79,7 @@ export default function NavLinksMobile() {
                       {link.text}
                     </AnchorLink>
                   ) : (
-                    <Link to={`/#${link.href}`}> {link.text}</Link>
+                    <Link to={`/#${link.href}`} onClick={closeMenu}> {link.text}</Link>
                   )}
                 </li>
               );

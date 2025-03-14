@@ -10,7 +10,7 @@ import about from '../../assets/videos/whyPayskul.mp4';
 const PlatformSection = () => {
   return (
     <div id='pricing' className="bg-purple-200 rounded-lg  w-full max-w-screen mx-auto  h-full">
-      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-12 items-center p-6 px-3 md:px-10 lg:px-12">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-12 items-center py-18 pt-20 px-3 lg:pt-28 md:px-10 lg:px-16">
         
         <div className="order-1 lg:order-2 flex justify-center lg:h-full">
           <img
@@ -53,7 +53,7 @@ const PlatformSection = () => {
               </Button>
             </div>
 
-            <div className="mt-16 flex flex-col items-center space-y-2 lg:flex-row lg:space-x-4 lg:space-y-0 justify-center lg:justify-start">
+            <div className="lg:mt-20 lg:pt-18 pt-8 flex flex-col items-center space-y-2 lg:flex-row lg:space-x-4 lg:space-y-0 justify-center lg:justify-start">
               <Typography variant="caption" className="text-center lg:text-left text-base">
                 Learn more about our community on socials
               </Typography>

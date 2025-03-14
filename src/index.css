@@ -28,8 +28,8 @@
 
 @font-face {
   font-family: 'CafeDeParis';
-  src: url('../assets/fonts/CafeDeParis.ttf') format('truetype');
-  font-weight: normal;
+  src: url('../assets/fonts/cafe.ttf') format('truetype');
+  font-weight: lighter;
   font-style: italic;
 }
 

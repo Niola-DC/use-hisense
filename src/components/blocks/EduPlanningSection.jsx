@@ -6,26 +6,26 @@ import slider from '../../assets/videos/slider.mp4';
 
 const EduPlanningSection = () => {
   const videoRef = useRef(null);
-  const videoUrl = null; 
-  
+  const videoUrl = null;
+
   // useEffect(() => {
   //   if (videoRef.current && videoUrl) {
   //     const playPromise = videoRef.current.play();
-      
+
   //     if (playPromise !== undefined) {
   //       playPromise.catch(error => {
   //         console.error("Video playback error:", error);
   //       });
   //     }
-      
+
   //     videoRef.current.loop = true;
   //   }
   // }, [videoUrl]);
-  
+
   return (
     <section className="py-6 pb-0 bg-white flex flex-col items-center text-center">
-      <div className="container mx-auto px-2 flex flex-col items-center">
-       
+      <div className="container mx-auto px-2 flex flex-col items-center mb-1">
+
         <div className="max-w-2xl space-y-6">
           <Typography variant="heading" className="text-3xl md:text-4xl font-bold text-gray-900">
             Plan your education <span className="text-span">with</span> us
@@ -36,16 +36,36 @@ const EduPlanningSection = () => {
             and ease your financial stress.
           </Typography>
         </div>
-        <div>
-          <img
+        <div className='h-[500px] pb-14'>
+          {/* <img
           src={photo}
-          alt='image'
-          className='w-full h-auto lg:w-full lg:h-fit object-cover md:w-120 md:h-90 md:items-center z-10 '/>
+          // alt='image'
+          className='w-full h-[500px] mb-6 lg:w-full lg:h-fit object-cover md:w-120 md:h-90 md:items-center z-10'/> */}
+
+          {/* <img
+            src={photo}
+            className="mask-image-[linear-gradient(to_top,rgba(0,0,0,1),rgba(0,0,0,0))]"
+            alt="Masked Image"
+          /> */}
+
+          <img
+            src={photo}
+            className="mask-image-[linear-gradient(to_top,rgba(0,0,0,1),rgba(0,0,0,0))] mb-10"
+            alt="Masked Image"
+          />
+          {/* <div className="pb-10">
+            <img
+              src={photo}
+              className="mask-image-[linear-gradient(to_top,rgba(0,0,0,1),rgba(0,0,0,0))]"
+              alt="Masked Image"
+            />
+          </div> */}
+
 
         </div>
       </div>
       <div className='w-full'>
-      <VideoBox src={slider} poster="Motion" />
+        <VideoBox src={slider} poster="Motion" />
       </div>
     </section>
   );
@@ -56,7 +76,7 @@ export default EduPlanningSection;
 
 
 
- {/* <div className="mt-12 w-full max-w-4xl aspect-video rounded-xl overflow-hidden shadow-lg">
+{/* <div className="mt-12 w-full max-w-4xl aspect-video rounded-xl overflow-hidden shadow-lg">
         //  className='max-w-5xl h-100 md:w-100 md:h-50' />
 
           {videoUrl ? (

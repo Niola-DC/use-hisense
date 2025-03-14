@@ -35,12 +35,16 @@ const Footer = () => {
           <ul className="space-y-2 lg:space-y-6">
             <li className="font-semibold text-white text-left">Explore</li>
             <li className='text-left'>
-              <Link to="/communities" className="text-gray-300 hover:text-white transition">
+              <Link to="/communities" className="text-gray-300 hover:text-white transition"  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}>
                 Communities
               </Link>
             </li>
             <li className='text-left'>
-              <Link to="/resources" className="text-gray-300 hover:text-white transition">
+              <Link to="/resources" className="text-gray-300 hover:text-white transition" onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}>
                 Resources
               </Link>
             </li>
@@ -49,12 +53,16 @@ const Footer = () => {
           <ul className="space-y-2 lg:space-y-6">
             <li className="font-semibold text-white text-left">Legal</li>
             <li className='text-left'>
-              <Link to="/terms" className="text-gray-300 hover:text-white transition">
+              <Link to="/terms" className="text-gray-300 hover:text-white transition" onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}>
                 Terms
               </Link>
             </li>
             <li className='text-left'>
-              <Link to="/policy" className="text-gray-300 hover:text-white transition">
+              <Link to="/policy" className="text-gray-300 hover:text-white transition" onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}>
                 Privacy Policy
               </Link>
             </li>
