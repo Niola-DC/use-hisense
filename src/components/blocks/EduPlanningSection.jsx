@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Typography } from '../core/Typography';
 import photo from '../../assets/images/plan.png';
 import VideoBox from '../composite/VieBox';
@@ -36,7 +36,7 @@ const EduPlanningSection = () => {
             and ease your financial stress.
           </Typography>
         </div>
-        <div className='h-[500px] pb-14'>
+        <div className='h-[270px] pb-14 md:h-[420px] lg:h-[500px]'>
           {/* <img
           src={photo}
           // alt='image'
@@ -50,7 +50,7 @@ const EduPlanningSection = () => {
 
           <img
             src={photo}
-            className="mask-image-[linear-gradient(to_top,rgba(0,0,0,1),rgba(0,0,0,0))] mb-10"
+            className="mb-10 sm:mb-0 sm:pb-0"
             alt="Masked Image"
           />
           {/* <div className="pb-10">
@@ -64,7 +64,7 @@ const EduPlanningSection = () => {
 
         </div>
       </div>
-      <div className='w-full'>
+      <div className='w-full sm:mb-2 sm:mt-2 sm:pt-0'>
         <VideoBox src={slider} poster="Motion" />
       </div>
     </section>

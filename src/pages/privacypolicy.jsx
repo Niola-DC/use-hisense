@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Heading from '../components/core/Headings';
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
 const PrivacyPolicyPage = () => {
+  const bottomRef = useRef(null);
+
+  const scrollToBottom = () => {
+    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-1 md:py-16">
       <div className="bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto">
@@ -189,6 +195,15 @@ const PrivacyPolicyPage = () => {
         </p>
 
       </div>
+      <button 
+        onClick={scrollToBottom} 
+        className="fixed bottom-6 right-6 bg-purple-600 text-white p-4 rounded-full shadow-lg hover:bg-purple-800 transition duration-300">
+        {/* <FaArrowDown size={24} /> */}
+        <ChevronDownIcon fontSize={24} width={24} />
+      </button>
+
+      {/* Bottom Reference */}
+      <div ref={bottomRef} className="mt-10"></div>
     </div>
   );
 };
