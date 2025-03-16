@@ -44,7 +44,7 @@ export default function NavLinksMobile() {
       />
       <nav
         className={clsx(
-          "transition-right fixed top-0 bottom-0 z-20 w-2/3 space-y-8 bg-primary px-3 py-6 duration-500 sm:w-1/2 md:hidden",
+          "transition-right fixed top-0 bottom-0 z-20 w-2/3 space-y-8 bg-primary px-3 py-6 duration-500 sm:w-1/2 lg:hidden",
           { "-right-[100dvw]": !isNavOpen, "right-0": isNavOpen }
         )}
       >

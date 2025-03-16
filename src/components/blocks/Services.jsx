@@ -62,7 +62,7 @@ const Services = () => {
             </div>
 
             {/* Desktop View */}
-            <div className="hidden md:flex flex-wrap justify-center gap-6 mx-6 mt-4">
+            <div className="hidden lg:flex flex-wrap justify-center gap-6 mx-6 mt-4">
                 <div className="w-full md:flex md:flex-row md:justify-center md:gap-6">
                     {/* Left Side Services */}
                     <div className="flex flex-col gap-4">
@@ -102,7 +102,7 @@ const Services = () => {
             </div>
 
             {/* Mobile View */}
-            <div className="md:hidden flex flex-col items-center">
+            <div className="md:flex flex flex-col items-center lg:hidden">
                 {/* Mobile Image Preview (Centered on Load) */}
                 {/* <img className="h-[300px] w-full max-w-xs object-cover mb-4" src={activeImage} alt="Service preview" /> */}
 
@@ -132,7 +132,7 @@ const Services = () => {
       >
         {/* Alternating Layout */}
         {index % 2 !== 0 && (
-          <div className="mb-2 p-6 w-[250px] rounded-lg shadow-lg cursor-pointer">
+          <div className=" p-6 w-[250px] rounded-lg shadow-lg cursor-pointer">
             <div className="w-6 h-6 bg-purple-200 rounded-full mb-2 mx-auto"></div>
             <h3 className="text-base font-semibold mb-1">{service.title}</h3>
             <p className="text-gray-600 text-xs">{service.description}</p>
@@ -140,12 +140,12 @@ const Services = () => {
         )}
 
         {/* Service Image with Light Purple Background */}
-        <div className="w-[250px] h-[200px] bg-purple-100 rounded-lg flex justify-center items-center p-4">
+        <div className="w-[250px] h-[200px] bg-purple-100 flex justify-center items-center p-4">
           <img className="h-full w-full object-cover rounded-md" src={service.image} alt={service.title} />
         </div>
 
         {index % 2 === 0 && (
-          <div className="mt-2 p-6 w-[250px] rounded-lg shadow-lg cursor-pointer">
+          <div className=" p-6 w-[250px] rounded-lg shadow-lg cursor-pointer">
             <div className="w-6 h-6 bg-purple-200 rounded-full mb-2 mx-auto"></div>
             <h3 className="text-base font-semibold mb-1">{service.title}</h3>
             <p className="text-gray-600 text-xs">{service.description}</p>
